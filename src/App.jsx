@@ -1,23 +1,19 @@
-import './App.css'
-import Body from './Compontent/Body'
-import Form from './Compontent/Form'
+import "./App.css";
+import Body from "./Compontent/Body";
+import Form from "./Compontent/Form";
 // import './responsive.css';
-import NavBar from './Compontent/NavBar'
-import { ModalProvider } from './modalContext'
+import NavBar from "./Compontent/NavBar";
+import { ModalProvider } from "./modalContext";
 
 function App() {
- 
   return (
-    <div className='container-fluid'>
+    <div className="container-fluid">
       <ModalProvider>
-        
-    <NavBar/>
-  
-    <Body/>
-
-    </ModalProvider>
+        <NavBar />
+        <Body />
+      </ModalProvider>
     </div>
-  )
+  );
 }
 
-export default App
+export default App;

@@ -14,12 +14,12 @@ const NavBar = () => {
     <div className="container nav-container bg-light p-3 ">
       <div className="row">
         {/* Left section */}
-        <div className="col-8 col-sm-6">
+        <div className="col-6">
           <h3 className="logo text-primary text-start">My-Notebook</h3>
         </div>
 
         {/* Right section - Search Bar */}
-        <div className="col-4 col-sm-6">
+        <div className="col-6">
           <div className={menu ? " right-mob " : "right-sec"}>
             <ul className="myNav ml-4">
               <li className="nav-item">

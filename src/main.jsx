@@ -4,9 +4,13 @@ import './index.css'
 import './responsive.css'
 import App from './App.jsx'
 import 'bootstrap/dist/css/bootstrap.min.css'
+import { Provider } from 'react-redux'
+import store from './Store/Store.js'
 
 createRoot(document.getElementById('root')).render(
   <StrictMode>
+    <Provider store={store}>
     <App />
+  </Provider>
   </StrictMode>,
 )

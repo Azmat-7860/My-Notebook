@@ -1,18 +1,29 @@
-import {  createContext, useContext, useState } from "react";
+import { createContext, useContext, useState } from "react";
 
-const modalContext = createContext();
+const ModalContext = createContext();
 
+export const ModalProvider = ({ children }) => {
+  const [showModal, setShowModal] = useState(false);
+  const [modalData, setModalData] = useState(null);
+  const [isUpdate, setIsUpdate] = useState(false);
 
-export const ModalProvider = ({children}) => {
-    const [showModal,setShowModal] = useState(false);
+  const openModal = (note = null, update = false) => {
+    setModalData(note);
+    setIsUpdate(update);
+    setShowModal(true);
+  };
 
-    const openModal = () => setShowModal(true);
-    const closeModal = () => setShowModal(false);
+  const closeModal = () => {
+    setShowModal(false);
+    setModalData(null);
+    setIsUpdate(false);
+  };
 
-    return <modalContext.Provider value={{showModal,openModal,closeModal}} >
-        {children}
-    </modalContext.Provider>
+  return (
+    <ModalContext.Provider value={{ showModal, modalData, isUpdate, openModal, closeModal }}>
+      {children}
+    </ModalContext.Provider>
+  );
+};
 
-}
-
-export const  useModal = ()=> useContext(modalContext);
+export const useModal = () => useContext(ModalContext);
