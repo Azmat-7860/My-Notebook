@@ -113,20 +113,27 @@ button:hover {
 /* ---------------------- */
 
 /* 3.form section  */
+.myModal{
+  position: absolute;
+  top: 40%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
 .contact-form {
-  min-width: 70%;
- 
+  min-width: 100%;
   padding: 10px 0px;
   border-radius: 20px 10px 20px 10px;
   border: 1px solid #4746468a;
-
   background: linear-gradient(
     70deg,
-    (rgba(0, 0, 0, 0.2)),
+    rgba(0, 0, 0, 0.2),
     rgba(255, 255, 255, 0.3)
   );
   backdrop-filter: blur(10px);
   transition: all 0.6s ease-in;
+}
+.contact-form input::placeholder,textarea::placeholder{
+  color: white;
 }
 .contact-form:hover {
   scale: 1.01;
@@ -157,3 +164,8 @@ button:hover {
   font-weight: bold;
 }
 /* ---------------------- */
+.card-container{
+  min-width: 250px;
+  max-width: 300px;
+  border: 1px solid white;
+}

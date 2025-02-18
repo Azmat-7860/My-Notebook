@@ -1,14 +1,15 @@
 import React from "react";
 import Form from "./Form";
 import { useModal } from "../modalContext";
-import Card from "./Card";
+import Cards from "./Cards";
 
 const Body = () => {
-    const {showModal,closeModal} = useModal();
+  const { showModal, closeModal } = useModal();
   return (
-    <div className="body-container container border border-black ">
-   <Card/>
-     <Form showModal={showModal} closeModal={closeModal} />
+    <div className="body-container container position-relative ">
+      <Form showModal={showModal} closeModal={closeModal} />
+      <Cards />
+
     </div>
   );
 };

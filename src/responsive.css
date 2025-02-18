@@ -8,6 +8,9 @@
     display: flex !important;
     justify-content: end;
   }
+  .myModal {
+    min-width: 300px;
+  }
 }
 
 /* Small devices (phones, 576px and up) */
@@ -19,6 +22,9 @@
   .right-btn {
     display: flex !important;
     justify-content: end;
+  }
+  .myModal {
+    min-width: 400px;
   }
 }
 
@@ -32,6 +38,9 @@
     display: flex !important;
     justify-content: end;
   }
+  .myModal {
+    min-width: 550px;
+  }
 }
 
 /* Large devices (desktops, 992px and up) */
@@ -42,6 +51,9 @@
   }
   .right-btn {
     display: none !important;
+  }
+  .myModal {
+    min-width: 700px;
   }
 
   /* Your styles for large devices */
@@ -62,7 +74,7 @@
 @media (min-width: 1400px) {
   .right-sec {
     display: flex !important;
-     justify-content: end;
+    justify-content: end;
   }
   .right-btn {
     display: none !important;

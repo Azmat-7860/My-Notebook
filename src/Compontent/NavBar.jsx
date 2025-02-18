@@ -14,21 +14,21 @@ const NavBar = () => {
     <div className="container nav-container bg-light p-3 ">
       <div className="row">
         {/* Left section */}
-        <div className="col-6">
+        <div className="col-8 col-sm-6">
           <h3 className="logo text-primary text-start">My-Notebook</h3>
         </div>
 
         {/* Right section - Search Bar */}
-        <div className="col-6">
+        <div className="col-4 col-sm-6">
           <div className={menu ? " right-mob " : "right-sec"}>
             <ul className="myNav ml-4">
               <li className="nav-item">
-                <a href="#" className="nav-link text-secondary">
+                <a href="#"  className="nav-link text-black">
                   All Notes
                 </a>
               </li>
               <li className="nav-item">
-                <a href="#" onClick={openModal} className="nav-link text-secondary">
+                <a href="#" onClick={openModal} className="nav-link text-black">
                   Create Note
                 </a>
               </li>
@@ -39,7 +39,7 @@ const NavBar = () => {
                 className="form-control me-2"
                 placeholder="Find Your Notebook"
               />
-              <button className="btn btn-primary">Search</button>
+              <button className="btn btn-outline-primary fw-bold">Search</button>
             </form>
           </div>
           <div className="right-btn ">

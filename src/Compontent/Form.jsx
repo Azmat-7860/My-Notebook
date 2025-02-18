@@ -11,7 +11,7 @@ const Form = ({ showModal, closeModal }) => {
   if (!showModal) return null;
 
   return (
-    <div className="modal-overlay">
+    <div className="modal-overlay myModal position-absolute">
       <div className="modal-content align-items-center">
         {/* Modal Header with Close Icon */}
 
@@ -22,7 +22,7 @@ const Form = ({ showModal, closeModal }) => {
         >
           {" "}
           <div className=" w-100 d-flex justify-content-between align-items-center px-3">
-            <h4 className="text-white fw-bold mt-1">Create a New Post</h4>
+            <h4 className="text-white fw-bold mt-1">Create a New Note</h4>
             <FaTimes size={28} color="white" onClick={closeModal} />
           </div>
           <input
