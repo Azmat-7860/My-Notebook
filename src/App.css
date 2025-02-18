@@ -3,40 +3,157 @@
   margin: 0 auto;
   padding: 2rem;
   text-align: center;
+  
 }
+body{
+  background-color: rgb(34, 33, 33) !important;
 
+}
+/* 1.Nav-section */
+.nav-container{
+  border-radius: 10px 30px 10px 30px;
+}
 .logo {
-  height: 6em;
-  padding: 1.5em;
-  will-change: filter;
-  transition: filter 300ms;
-}
-.logo:hover {
-  filter: drop-shadow(0 0 2em #646cffaa);
-}
-.logo.react:hover {
-  filter: drop-shadow(0 0 2em #61dafbaa);
+  font-size: 22px;
+  font-weight: bold;
 }
 
-@keyframes logo-spin {
-  from {
-    transform: rotate(0deg);
+.nav-link {
+  font-size: 18px;
+}
+
+.nav-link:hover {
+  color: #007bff; /* Blue color on hover */
+}
+
+input {
+  border-radius: 8px;
+  padding: 10px;
+}
+
+button {
+  border-radius: 8px;
+  padding: 10px 15px;
+}
+
+button:hover {
+  background-color: #0056b3; /* Darker blue */
+}
+
+@media (max-width: 767px) {
+  .logo {
+    font-size: 20px; /* Smaller font for mobile */
   }
-  to {
-    transform: rotate(360deg);
+
+  .nav-link {
+    font-size: 16px;
   }
 }
+.myNav {
+  width: 50%;
+  list-style: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10%;
+  margin: auto;
+}
+ /* mobile view header  */
 
-@media (prefers-reduced-motion: no-preference) {
-  a:nth-of-type(2) .logo {
-    animation: logo-spin infinite 20s linear;
-  }
+
+ .right-mob {
+     display: flex;
+     flex-direction: column;
+     align-items: center;
+     background-color: #f8f9fa;
+     position: absolute;
+     border-radius: 10px 30px 10px 30px;
+     top: 98px;
+     right: 14%;
+     width: 73%;
+     padding: 10px;
+     box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+     z-index: 1000;
+ }
+/* Ensure nav links are stacked */
+.right-mob .myNav {
+  display: flex;
+  flex-direction: column;
+  list-style: none;
+  padding: 0;
+  width: 100%;
+  text-align: center;
 }
 
-.card {
-  padding: 2em;
+.right-mob .myNav .nav-item {
+  padding: 10px 0;
 }
 
-.read-the-docs {
-  color: #888;
+
+/* Ensure form is centered */
+.right-mob form {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  margin-top: 10px;
 }
+
+/* Make input full width */
+.right-mob input {
+  width: 80%;
+  max-width: 300px;
+}
+/* ---------------------- */
+/* 2.Body section  */
+
+.body-container{
+  margin: 20px 0;
+  min-height: 80vh;
+}
+/* ---------------------- */
+
+/* 3.form section  */
+.contact-form {
+  min-width: 70%;
+ 
+  padding: 10px 0px;
+  border-radius: 20px 10px 20px 10px;
+  border: 1px solid #4746468a;
+
+  background: linear-gradient(
+    70deg,
+    (rgba(0, 0, 0, 0.2)),
+    rgba(255, 255, 255, 0.3)
+  );
+  backdrop-filter: blur(10px);
+  transition: all 0.6s ease-in;
+}
+.contact-form:hover {
+  scale: 1.01;
+  box-shadow: 0 6px 12px rgba(255, 255, 255, 0.2);
+}
+.contact-form input,
+.contact-form textarea,
+.contact-form button {
+  background: transparent;
+  outline: none;
+  color: white;
+  padding: 10px 20px;
+  margin: 10px auto;
+  width: 70%;
+  border: 1px solid white;
+  border-radius: 5px 10px 5px 10px;
+}
+.contact-form button {
+  color: white;
+  font-size: large;
+  font-weight: bold;
+  transition: all 0.5s ease-in;
+}
+.contact-form button:hover {
+  background-color: wheat;
+  color: black;
+  font-size: large;
+  font-weight: bold;
+}
+/* ---------------------- */
