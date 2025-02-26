@@ -4,8 +4,9 @@ import { useModal } from "../modalContext";
 
 
 const NavBar = () => {
-  const {openModal} = useModal();
+  const {setText,openModal} = useModal();
   const [menu, setMenu] = useState(false);
+// console.log(text);
 
   const toggelMenu = () => {
     setMenu(!menu);
@@ -33,14 +34,16 @@ const NavBar = () => {
                 </a>
               </li>
             </ul>
-            <form className="d-flex">
+           <form className="d-flex">
               <input
+              onChange={e => setText(e.target.value)}
+              name="searchIndex"
                 type="text"
                 className="form-control me-2"
                 placeholder="Find Your Notebook"
               />
-              <button className="btn btn-outline-primary fw-bold">Search</button>
-            </form>
+              
+              </form>
           </div>
           <div className="right-btn ">
             <FaHamburger

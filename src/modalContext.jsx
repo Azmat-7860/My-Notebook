@@ -3,6 +3,7 @@ import { createContext, useContext, useState } from "react";
 const ModalContext = createContext();
 
 export const ModalProvider = ({ children }) => {
+  const [text, setText] = useState("");
   const [showModal, setShowModal] = useState(false);
   const [modalData, setModalData] = useState(null);
   const [isUpdate, setIsUpdate] = useState(false);
@@ -20,7 +21,17 @@ export const ModalProvider = ({ children }) => {
   };
 
   return (
-    <ModalContext.Provider value={{ showModal, modalData, isUpdate, openModal, closeModal }}>
+    <ModalContext.Provider
+      value={{
+        text,
+        setText,
+        showModal,
+        modalData,
+        isUpdate,
+        openModal,
+        closeModal,
+      }}
+    >
       {children}
     </ModalContext.Provider>
   );
